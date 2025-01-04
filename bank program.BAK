@@ -1,0 +1,71 @@
+#include<iostream.h>
+#include<stdlib.h>
+#include<conio.h>
+class bank
+{
+double amt,balance;
+void withraw()
+{
+cout<<"enter your withdraw amout";
+input();
+balance=balance-amt;
+cout<<"withdraw amout is"<<amt<<endl;
+view();
+}
+void deposit()
+{
+cout<<"enter the deposit amout:";
+input();
+balance=balance+amt;
+cout<<"withdrawed amout is"<<amt<<endl;
+view();
+}
+void view()
+{
+cout<<"current balance amount = "<<balance<<endl;
+}
+void input()
+{
+cin>>amt;
+}
+void menu()
+{
+int ch;
+do
+{
+cout<<"*****************";
+cout<<"\n1.deposit";
+cout<<"\n2.withdraw";
+cout<<"\n3.view";
+cout<<"\n0.exit";
+cout<<"*****************";
+cin>>ch;
+swith(ch)
+{
+case 1:deposit();
+break;
+case 2:withdraw();
+break;
+case 3:view();
+break;
+case :exit(0);
+break;
+default :cout<<"*****\tinvalid choice\t*******";
+}
+}while(ch!=0)
+}
+public:
+bank()
+{
+balance=0.0;
+}
+void pin()
+{
+int p;
+cin>>p;
+if (p==1234)
+menu();
+else
+cout<<"invalid pin no. ";
+}
+};
